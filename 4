@@ -1,0 +1,54 @@
+a = int(input())
+b = int(input())
+c = int(input())
+print(a + b + c)
+_________________
+b = int(input())
+h = int(input())
+S = 0.5 * b * h
+print(S)
+________________
+n = int(input())
+h = (n // 60) % 24
+m = n % 60
+print(h)
+print(m)
+________________
+a = int(input())
+b = int(input())
+l = int(input())
+N = int(input())
+print(2 * (a + b) * (N - 1) + 2 * l + a)
+_________________________________________
+a = int(input())
+b = int(input())
+c = int(input())
+if b >= a <= c:
+    print(a)
+elif a >= b <= c:
+    print(b)
+else:
+    print(c)
+    _________________________________________
+    summ = 0
+for i in range(4):
+    summ += int(input())
+if summ % 2 == 0:
+    print('YES')
+else:
+    print('NO')
+    _________________________________________
+    n = int(input())
+total_sum = 0
+factorial = 1
+
+for i in range(1, n + 1):
+    factorial *= i
+    total_sum += factorial
+
+print(total_sum)
+  _________________________________________
+  n = int(input())
+for i in range(1, n + 1):
+    print(''.join(str(x) for x in range(1, i + 1)))
+      _________________________________________
