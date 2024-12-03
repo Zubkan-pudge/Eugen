@@ -1,0 +1,14 @@
+7вариант
+l = [1, 2, 3, 4, 5]
+s = sum(l[i] for i in range(0, len(l), 2))
+p = 1
+for i in range(1, len(l), 2):
+    p *= l[i]
+print(s, p)
+
+
+l = [1, 5, 3, 9, 2]
+m = l.index(min(l))
+M = l.index(max(l))
+l[m], l[M] = l[M], l[m]
+print(l)
