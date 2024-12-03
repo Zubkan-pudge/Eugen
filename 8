@@ -1,0 +1,19 @@
+Вариант 9
+
+def s(n):
+    return sum(int(d) for d in str(n))
+
+def t(n):
+    c = 0
+    while n > 0:
+        n -= s(n)
+        c += 1
+    return c
+
+
+def p_a(a):
+    prod = 1
+    for x in a:
+        prod *= x
+    avg = sum(a) / len(a) if a else 0
+    return prod, avg
