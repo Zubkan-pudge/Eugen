@@ -8,12 +8,19 @@ def t(n):
     while n > 0:
         n -= s(n)
         c += 1
+    print(c)
     return c
 
-
-def p_a(a):
-    prod = 1
+def p(a):
+    p = 1
     for x in a:
-        prod *= x
+        p *= x
     avg = sum(a) / len(a) if a else 0
-    return prod, avg
+    print(p, avg)
+    return p, avg
+
+n = 10
+t(n)
+
+a = [1, 2, 3, 4]
+p(a)
