@@ -1,0 +1,29 @@
+Простите но я не умею прикреплять файлы поэто результат записал здесь
+Блок A задание 2
+def remainder(a, b):
+    if a < b:
+        return a
+    return remainder(a - b, b)
+a = 17
+b = 5
+result = remainder(a, b)
+print(result)
+Результат:2
+Блок Б задание 1 
+def f():
+    n = int(input("Введите натуральное число (0 для завершения): "))
+    if n == 0:
+        return float('-inf')
+    m = f()
+    return max(n, m)
+
+x = f()
+print(x)
+Если
+5
+3
+8
+1
+4
+0
+Результат:8
