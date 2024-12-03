@@ -1,0 +1,35 @@
+Я не понял как прекрепить txt файлы но они у меня есть
+def m(A):
+    r = []
+    for i in range(len(A)):
+        if i % 2 == 0:  # Четная строка
+            r.append(min(A[i]))
+    return r
+
+def s(A):
+    mn = A[0][0]
+    mx = A[0][0]
+    p_mn = (0, 0)
+    p_mx = (0, 0)
+    for i in range(len(A)):
+        for j in range(len(A[i])):
+            if A[i][j] < mn:
+                mn = A[i][j]
+                p_mn = (i, j)
+            if A[i][j] > mx:
+                mx = A[i][j]
+                p_mx = (i, j)
+    A[p_mn[0]][p_mn[1]], A[p_mx[0]][p_mx[1]] = A[p_mx[0]][p_mx[1]], A[p_mn[0]][p_mn[1]]
+    return A
+
+with open('ЕЕР_У-242_vvod.txt', 'r', encoding='utf-8') as f:
+    mtrx = [list(map(int, line.split())) for line in f]
+
+min_e = m(mtrx)
+sw_m = s(mtrx)
+
+with open('ЕЕР_У-242_vivod.txt', 'w', encoding='utf-8') as f:
+    f.write("Результат первого задания: " + str(min_e) + "\n")
+    f.write("Результат второго задания:\n")
+    for r in sw_m:
+        f.write(' '.join(map(str, r)) + '\n')
